@@ -18,15 +18,8 @@ app.get("/",(req,res)=>{
     res.send("Welcome to Home Page")
 })
 
-app.listen(8080, async()=>{
+app.listen( process.env.PORT || 8080, async()=>{
     await Connection
     console.log("server started at http://localhost:8080");
 })
 
-// async function getPost(){
-//     const myPosts = await fetch("https://randomuser.me/api?results=50")
-//     const response = await myPosts.json()
-//     console.log("users",response);
-// }
-
-// getPost()

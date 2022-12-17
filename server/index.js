@@ -1,18 +1,14 @@
 
-const express  = require("express")
-// const connection  = require("./database/db")
-// const blogRouter = require("./routes/blog")
-// const productRouter = require("./routes/product")
-// const authRouter = require("./routes/Auth")
-const cors = require("cors")
+import express from "express"
+import cors  from "cors"
+import  Connection  from "./database/db.js"
+import userRouter from "./routes/users.js"
 
 const app = express()
 app.use(express.json())
-// app.use('/uploads',express.static('uploads'))
 app.use(express.urlencoded({extended:true}))
-// app.use("/blog",blogRouter)
-// app.use("/product",productRouter)
-// app.use("/auth",authRouter)
+app.use("/user", userRouter)
+
 
 app.use(cors({
     origin:"*"
@@ -23,6 +19,14 @@ app.get("/",(req,res)=>{
 })
 
 app.listen(8080, async()=>{
-    // await connection
+    await Connection
     console.log("server started at http://localhost:8080");
 })
+
+// async function getPost(){
+//     const myPosts = await fetch("https://randomuser.me/api?results=50")
+//     const response = await myPosts.json()
+//     console.log("users",response);
+// }
+
+// getPost()

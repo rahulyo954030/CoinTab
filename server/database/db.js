@@ -1,6 +1,6 @@
-const mongoose = require("mongoose")
+import mongoose  from "mongoose"
 
-module.exports = mongoose.connect("mongodb://localhost:27017/mern")
+export default  mongoose.connect("mongodb://localhost:27017/cointop")
 
 mongoose.connection.on("connected",()=>{
     console.log("connected to database successfully,");

@@ -18,7 +18,7 @@ const User = () => {
   }, [filterTerm]);
   const getDataFunction = () => {
     axios
-      .get(`http://localhost:8080/user?page=${pageNumber}`)
+      .get(`https://calm-plum-termite-boot.cyclic.app/user?page=${pageNumber}`)
       .then((res) => {
         settotal_Pages(res.data.totalPages);
         setdata(res.data.blog);
@@ -45,7 +45,7 @@ const User = () => {
 
   const filterByGender = (e) => {
     axios
-      .get(`http://localhost:8080/user/search/${e.target.value}`)
+      .get(`https://calm-plum-termite-boot.cyclic.app/user/search/${e.target.value}`)
       .then((res) => {
         setdata(res.data);
         console.log(e.target.value);

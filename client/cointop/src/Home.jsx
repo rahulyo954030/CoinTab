@@ -16,7 +16,7 @@ const Home = () => {
   
   const getBlogFunction = ()=>{
     
-    axios.get("https://calm-plum-termite-boot.cyclic.app/user?page=0")
+    axios.get("https://rahul-singh-cointab-assignment.onrender.com/user?page=0")
     .then((res)=>{
       let arr = res.data.blog
       if(arr.length === 0){
@@ -33,7 +33,7 @@ const Home = () => {
 
   const fetchButton = () => {
     if(sign===false){
-      axios.post("https://calm-plum-termite-boot.cyclic.app/user")
+      axios.post("https://rahul-singh-cointab-assignment.onrender.com/user")
       .then((res)=>{
         getBlogFunction();
         setSign(true)
@@ -49,7 +49,7 @@ const Home = () => {
 
   const deleteButton = () => {
     if(sign == true){
-      axios.delete("https://calm-plum-termite-boot.cyclic.app/user")
+      axios.delete("https://rahul-singh-cointab-assignment.onrender.com/user")
     .then((res)=>{
       getBlogFunction()
     })

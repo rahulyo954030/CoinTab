@@ -84,8 +84,9 @@ Get: https://rahul-singh-cointab-assignment.onrender.com/user?page=1
 ```Javascript
 Get: https://rahul-singh-cointab-assignment.onrender.com/user/search/male
 ```
-<img src="https://i.ibb.co/nPF7XVb/backend-Filter.png" />
+<img src="https://i.ibb.co/jhM390G/backend-Filter.png" />
 <br/>
+
 <br/>
 
 <h3>Deployment:</h3>

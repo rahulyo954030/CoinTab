@@ -1,10 +1,6 @@
 # CoinTab Assignment
 
 <h3>Frontend deployment:</h3>
-
-```Javascript
-https://cointop.vercel.app/
-```
 <p>https://cointop.vercel.app/</p>
 <br/>
 
